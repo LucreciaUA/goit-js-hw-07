@@ -2,6 +2,7 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 console.log(galleryItems);
+let lightbox;
 const gallery = document.querySelector(".gallery")
 const item = galleryItems.map(({ preview, original, description }) => {
     return `<li class="gallery__item">
@@ -24,7 +25,6 @@ lightbox = new SimpleLightbox('.gallery a', {
     captionSelector: 'img',
     captionsData: 'alt',
     captionDelay: '250',
-    showCounter: false,
     alertErrorMessage: '（╯‵□′）╯︵┴─┴',
     overlay: true,
     overlayOpacity: 0.4,
